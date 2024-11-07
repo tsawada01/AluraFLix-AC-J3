@@ -7,31 +7,98 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" 
           rel="stylesheet" />
     <title>AluraFlix AC J3</title>
+    <style>
+        body {
+            font-family: 'Chakra Petch', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* Seção chamada com flexbox para alinhar o texto e o vídeo lado a lado */
+        .chamada {
+            display: flex;
+            align-items: center; /* Alinha o conteúdo verticalmente */
+            justify-content: space-between; /* Garante que o texto e o vídeo tenham espaço entre eles */
+            padding: 2rem;
+            background-color: #f5f5f5;
+        }
+
+        .chamada-texto h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .chamada-texto p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        /* Estilo para o iframe (vídeo) */
+        .chamada-video iframe {
+            max-width: 560px; /* Limita o tamanho do vídeo */
+            width: 100%; /* Garante que o vídeo ocupe 100% do tamanho disponível (com limite) */
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Categoria de vídeos */
+        .categoria {
+            padding: 2rem;
+            background-color: #fff;
+        }
+
+        .categoria h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .categoria-vídeos {
+            display: flex;
+            gap: 1rem; /* Espaçamento entre as imagens */
+            overflow-x: auto; /* Permite a rolagem horizontal */
+            padding-bottom: 1rem;
+        }
+
+        .categoria-vídeos a {
+            display: block;
+            max-width: 300px; /* Limita o tamanho das imagens */
+            flex-shrink: 0; /* Impede que as imagens encolham */
+        }
+
+        .categoria-vídeos img {
+            width: 100%; /* Faz a imagem ocupar toda a largura do link */
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
     <header>ALURAFLIX</header>
     
-    <!-- Seção chamada -->
+    <!-- Seção chamada com o vídeo ao lado do texto -->
     <section class="chamada">
         <div class="chamada-texto">
             <h1>ATRAVÉS DO ARANHAVERSO</h1>
             <p>#homem-aranha</p>
         </div>
+        <div class="chamada-video">
+            <iframe 
+                src="https://www.youtube.com/embed/SS6ABPkfmBE?si=KcZkyrWvvqD4zj_N" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+            ></iframe>
+        </div>
     </section>
-
-    <!-- Video Embed -->
-    <div>
-        <iframe 
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/SS6ABPkfmBE?si=KcZkyrWvvqD4zj_N" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen
-        ></iframe>
-    </div>
 
     <!-- Seção de categorias de vídeos -->
     <section class="categoria">
