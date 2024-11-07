@@ -1,37 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" 
           rel="stylesheet" />
     <title>AluraFlix AC J3</title>
+    <style>
+        body {
+            font-family: 'Chakra Petch', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* Seção chamada (título e texto) */
+        .chamada {
+            display: flex;
+            flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte em telas menores */
+            justify-content: space-between;
+            padding: 2rem;
+            background-color: #e2e2e2;
+        }
+
+        .chamada-texto {
+            flex: 1; /* Permite que o texto ocupe o espaço restante */
+            padding-right: 1rem;
+        }
+
+        .chamada-texto h1 {
+            font-size: 2rem;
+            margin: 0;
+            color: #333;
+        }
+
+        .chamada-texto p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        /* Estilo para o iframe (vídeo) */
+        .chamada-video iframe {
+            max-width: 100%;
+            width: 560px; /* Tamanho fixo até um certo ponto */
+            height: 315px;
+            border-radius: 8px;
+        }
+
+        /* Seção de categorias de vídeos */
+        .categoria {
+            padding: 2rem;
+            background-color: white;
+        }
+
+        .categoria h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        /* Estilo para a galeria de vídeos */
+        .categoria-vídeos {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+        }
+
+        .categoria-vídeos a {
+            display: block;
+            max-width: 300px;
+            flex-shrink: 0;
+        }
+
+        .categoria-vídeos img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Responsividade: Alinha o vídeo e o texto em telas menores */
+        @media (max-width: 768px) {
+            .chamada {
+                flex-direction: column; /* Empilha os elementos na vertical */
+                text-align: center;
+            }
+
+            .chamada-video iframe {
+                width: 100%;
+                height: auto;
+                max-width: 100%; /* O vídeo ocupa 100% da largura disponível */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>ALURAFLIX</header>
-    
-    <!-- Seção chamada -->
+
+    <!-- Seção chamada com título e vídeo ao lado -->
     <section class="chamada">
         <div class="chamada-texto">
             <h1>ATRAVÉS DO ARANHAVERSO</h1>
             <p>#homem-aranha</p>
         </div>
+        <div class="chamada-video">
+            <iframe 
+                src="https://www.youtube.com/embed/SS6ABPkfmBE?si=KcZkyrWvvqD4zj_N" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
     </section>
-
-    <!-- Video Embed -->
-    <div>
-        <iframe 
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/SS6ABPkfmBE?si=KcZkyrWvvqD4zj_N" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen
-        ></iframe>
-    </div>
 
     <!-- Seção de categorias de vídeos -->
     <section class="categoria">
