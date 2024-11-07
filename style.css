@@ -3,6 +3,7 @@ color: white;
 background-color: black;
 margin: 0px;
 font-family: "Chakra Petch", sans-serif;
+margin-bottom: 100px;
 }
 header{
     border-bottom: solid 2px rgb(42, 122, 228);
@@ -26,9 +27,7 @@ h1{
 p{
     font-size: 20px;
 }
-img{
-    height: 200px;
-}
+
 .categoria-vídeos{
     display: flex;
     overflow-x: auto;
@@ -37,4 +36,15 @@ img{
 .categoria{
     padding-left: 20px;
     padding-right: 20px;
+}
+.categoria-vídeos img{
+    opacity: 0.5;
+    height: 200px;
+}
+.categoria-videos img:hover{
+    opacity: 1.0;
+    border: 1px solid green;
+}
+.categoria h2{
+    color: rgb(42, 122, 228);
 }
